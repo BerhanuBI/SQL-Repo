@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/27/2023 11:57:29 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MSI"
+  DTS:CreatorName="MSI\anbir"
+  DTS:DTSID="{77F32655-F297-4F9D-A284-9A5855F5ED5B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="FileSystemTask"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{635B2622-75FA-4F20-810F-19D1881258E3}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Archive]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{7B809FFF-F305-4F2F-A248-1DBCF869B57F}"
+      DTS:ObjectName="Archive">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\Users\anbir\OneDrive\Documents\March 2023 BI Class\All Data\All Data\Archive" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[foreachloop data]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{CC4E3EC8-9D87-45A4-BBC1-35B2C3FA3CD6}"
+      DTS:ObjectName="foreachloop data">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\Users\anbir\OneDrive\Documents\March 2023 BI Class\All Data\All Data\foreachloop data" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[mmm.xml]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{2F8188BB-1010-4CF1-9578-34617D488206}"
+      DTS:ObjectName="mmm.xml">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\Users\anbir\OneDrive\Documents\BI Class August 2023\mmm.xml" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[msi.AdventureWorksDW2019]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{663ECD4F-9061-4E6F-B66A-7C5DA175E3C0}"
+      DTS:ObjectName="msi.AdventureWorksDW2019">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=msi;Initial Catalog=AdventureWorksDW2019;Integrated Security=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MSI.AdventureWorksDW2019]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{30D10630-E49C-4556-BDEA-0AF9DD14DAFB}"
+      DTS:ObjectName="MSI.AdventureWorksDW2019">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=MSI;Initial Catalog=AdventureWorksDW2019;Integrated Security=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[msi.AdventureWorksDW2019 1]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{479121C1-F3B1-44A3-A1B6-3D8C74184E07}"
+      DTS:ObjectName="msi.AdventureWorksDW2019 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=msi;Initial Catalog=AdventureWorksDW2019;Integrated Security=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[msi.CarSales]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{B4D5DDAC-43C3-40B3-9936-F6C0D9656D9B}"
+      DTS:ObjectName="msi.CarSales">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=msi;Initial Catalog=CarSales;Integrated Security=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[prospect_B_2023_04_01091829.xls]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{E4EBEC51-B269-4C7A-B6E0-A31400A407B6}"
+      DTS:ObjectName="prospect_B_2023_04_01091829.xls">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\anbir\OneDrive\Documents\March 2023 BI Class\All Data\All Data\foreachloop data\prospect_B_2023_04_01091829.xls" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[prospect_B_2023_04_01091829.xls 1]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{0EE21894-EFC5-4A03-9D0F-C9A2CE9C9905}"
+      DTS:ObjectName="prospect_B_2023_04_01091829.xls 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\anbir\OneDrive\Documents\March 2023 BI Class\All Data\All Data\Archive\prospect_B_2023_04_01091829.xls" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[test]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{A5D31785-EB4E-4086-AFED-6C9C3A18C6EE}"
+      DTS:ObjectName="test">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\Users\anbir\OneDrive\Documents\BI Class August 2023\test" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[test.xml]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{6B0325E3-7CBA-476E-8CDE-EE4DAD74F5F4}"
+      DTS:ObjectName="test.xml">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\Users\anbir\OneDrive\Documents\BI Class August 2023\test.xml" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\File System Task"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="File System Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{BC31CBAE-A08B-406F-9CB2-5B546D414DCB}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="File System Task"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="MoveFile"
+          TaskSourcePath="{E4EBEC51-B269-4C7A-B6E0-A31400A407B6}"
+          TaskDestinationPath="{7B809FFF-F305-4F2F-A248-1DBCF869B57F}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\File System Task 1"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="File System Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{C38CC081-2CF2-4A10-9DCD-AE30CCDE5E65}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="File System Task 1"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="MoveFile"
+          TaskSourcePath="{0EE21894-EFC5-4A03-9D0F-C9A2CE9C9905}"
+          TaskDestinationPath="{CC4E3EC8-9D87-45A4-BBC1-35B2C3FA3CD6}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\File System Task"
+          TopLeft="208.571432123379,29.0588239369508" />
+        <NodeLayout
+          Size="166.4,41.6"
+          Id="Package\File System Task 1"
+          TopLeft="202.64286050018,166.088237546307" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
