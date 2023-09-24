@@ -11,9 +11,112 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionGUID="{CC09391A-0E17-4C93-BF22-8B35F0008AEF}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{8BDEC69B-D28D-4DD5-849F-DF0AA57A77F3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:Variables />
-  <DTS:Executables />
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[msi.AUGUSTBICLASS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6DBE5DAC-2139-4D7D-B25D-025324142603}"
+      DTS:ObjectName="msi.AUGUSTBICLASS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=msi;Initial Catalog=AUGUSTBICLASS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[msi.AUGUSTBICLASS1]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{C2474936-ED16-4CBD-82AC-059E8ECF5A96}"
+      DTS:ObjectName="msi.AUGUSTBICLASS1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=msi;Initial Catalog=AUGUSTBICLASS;Integrated Security=True;Application Name=SSIS-Package1-{C2474936-ED16-4CBD-82AC-059E8ECF5A96}msi.AUGUSTBICLASS1;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8E12ADD9-56E2-4D3A-997B-3D92AB544B45}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CounterNumber">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\For Loop Container"
+      DTS:AssignExpression="@CounterNumber = @CounterNumber +1"
+      DTS:CreationName="STOCK:FORLOOP"
+      DTS:Description="For Loop Container"
+      DTS:DTSID="{9645E487-44C3-4EC0-9769-C820FA361397}"
+      DTS:EvalExpression="@CounterNumber &lt; 10"
+      DTS:ExecutableType="STOCK:FORLOOP"
+      DTS:InitExpression="@CounterNumber = 0"
+      DTS:LocaleID="-1"
+      DTS:MaxConcurrent="1"
+      DTS:ObjectName="For Loop Container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\For Loop Container\Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{5529AC71-ED64-47C1-ACAC-37F1D23C41A7}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Task"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C2474936-ED16-4CBD-82AC-059E8ECF5A96}"
+              SQLTask:SqlStatementSource="insert into dbo.SSISForLoopExample&#xA;(&#xA;countnumber, &#xA;loopnumber,&#xA;lastupdated&#xA;)&#xA;values (&#xA;                 @CounterNumber,&#xA;                 'loopnumber' + cast(@CounterNumber as varchar(50)),&#xA;&#x9;&#x9;&#x9;&#x9; getdate()&#xA;               )" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="CounterNumber"
+                SQLTask:DtsVariableName="User::CounterNumber"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="11"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\For Loop Container\Execute SQL Task"
+          TopLeft="32.3428598189841,32.7294139739964" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="245.6,144.8"
+          Size="245.6,188"
+          Id="Package\For Loop Container"
+          TopLeft="125.000002128737,81.8235305593089" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

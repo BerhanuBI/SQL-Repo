@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>My First SSIS Package</Name>
-    <LastWriteTime>2023-09-17T16:22:19.5253199Z</LastWriteTime>
+    <LastWriteTime>2023-09-23T16:28:49.8628488Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Package1.dtsx</Name>
-      <LastWriteTime>2023-08-27T14:26:33.7661803Z</LastWriteTime>
+      <LastWriteTime>2023-09-23T13:00:59.9762479Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -63,7 +63,17 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LookupTransformation.dtsx</Name>
-      <LastWriteTime>2023-09-17T16:29:26.8992996Z</LastWriteTime>
+      <LastWriteTime>2023-09-18T01:14:29.4089711Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ForLoopContainer.dtsx</Name>
+      <LastWriteTime>2023-09-23T16:28:49.8370807Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>SlowlyChangingDimension.dtsx</Name>
+      <LastWriteTime>2023-09-23T16:28:49.8245857Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
