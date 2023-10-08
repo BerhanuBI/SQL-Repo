@@ -8,6 +8,8 @@
         <UseWinAuth>false</UseWinAuth>
         <WinAuthUserName />
         <WinAuthDomain />
+        <ServerName>MSI</ServerName>
+        <PathOnServer>/SSISDB/AugustBIClass/My First SSIS Package</PathOnServer>
         <Run64BitRuntime>false</Run64BitRuntime>
         <UserIDs />
         <UserPasswords />
